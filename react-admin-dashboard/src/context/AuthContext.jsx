@@ -11,11 +11,9 @@ const DEMO_CREDENTIALS = {
 const readStoredAuth = () => localStorage.getItem(AUTH_KEY) === 'true';
 
 export function AuthProvider({ children }) {
-  // Lazy initializer: reads localStorage BEFORE the first render,
-  // so a refresh on /dashboard doesn't flash a redirect to /login.
+
   const [isAuthenticated, setIsAuthenticated] = useState(readStoredAuth);
 
-  // Keep multiple tabs in sync (e.g. logout in one tab logs out the others).
   useEffect(() => {
     const syncAuth = (event) => {
       if (event.key === AUTH_KEY || event.key === null) {
@@ -50,7 +48,6 @@ export function AuthProvider({ children }) {
   );
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export function useAuth() {
   const context = useContext(AuthContext);
   if (!context) {

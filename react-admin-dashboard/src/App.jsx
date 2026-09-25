@@ -17,12 +17,10 @@ export default function App() {
 
       <main>
         <Routes>
-          {/* Public routes */}
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/about" element={<About />} />
 
-          {/* Protected routes (nested) */}
           <Route
             path="/dashboard"
             element={
@@ -36,8 +34,6 @@ export default function App() {
             <Route path="settings" element={<Settings />} />
             <Route path="users" element={<Users />} />
           </Route>
-
-          {/* 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

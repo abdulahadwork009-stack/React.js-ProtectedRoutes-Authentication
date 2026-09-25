@@ -26,7 +26,6 @@ export default function Sidebar() {
 
   return (
     <aside className="w-full bg-slate-900 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:w-64 md:shrink-0">
-      {/* Mobile: horizontal scrollable tabs | Desktop: vertical sidebar */}
       <div className="flex h-full gap-1 overflow-x-auto p-3 md:flex-col md:overflow-visible md:p-4">
         <p className="hidden px-3 pb-2 text-xs font-semibold uppercase tracking-wider text-slate-500 md:block">
           Dashboard

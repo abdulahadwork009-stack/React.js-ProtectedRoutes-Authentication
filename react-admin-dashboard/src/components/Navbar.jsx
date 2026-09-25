@@ -70,10 +70,8 @@ export default function Navbar() {
           AdminHub
         </Link>
 
-        {/* Desktop menu */}
         <div className="hidden items-center gap-1 md:flex">{renderLinks()}</div>
 
-        {/* Mobile menu button */}
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -91,7 +89,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile dropdown */}
       {menuOpen && (
         <div className="border-t border-slate-200 bg-white px-4 py-3 md:hidden">
           <div className="flex flex-col gap-1">{renderLinks()}</div>

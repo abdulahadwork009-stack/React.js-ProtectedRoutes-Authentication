@@ -6,7 +6,7 @@ export default function ProtectedRoute({ children }) {
   const location = useLocation();
 
   if (!isAuthenticated) {
-    // Remember where the user was trying to go, so Login can send them back.
+    
     return <Navigate to="/login" replace state={{ from: location }} />;
   }
 

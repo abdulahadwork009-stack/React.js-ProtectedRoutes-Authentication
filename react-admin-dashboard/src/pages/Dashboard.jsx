@@ -15,7 +15,6 @@ const recentActivity = [
   'Weekly report generated',
 ];
 
-// Shown at /dashboard (the index route)
 export function DashboardOverview() {
   return (
     <div>
@@ -53,7 +52,6 @@ export function DashboardOverview() {
   );
 }
 
-// Layout for all /dashboard/* pages
 export default function Dashboard() {
   return (
     <div className="flex min-h-[calc(100vh-4rem)] flex-col md:flex-row">

@@ -7,13 +7,11 @@ export default function Login() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // If the user was sent here from a protected page, go back there after login.
   const redirectPath = location.state?.from?.pathname || '/dashboard';
 
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
 
-  // Already logged in? No need to see the login page.
   if (isAuthenticated) {
     return <Navigate to={redirectPath} replace />;
   }
